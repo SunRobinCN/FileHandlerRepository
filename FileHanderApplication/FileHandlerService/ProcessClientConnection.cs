@@ -46,13 +46,11 @@ namespace FileHandlerService
             _clientWriter.Flush();
 
             string line;
-
             try
             {
                 while (!string.IsNullOrEmpty(line = _clientReader.ReadLine()))
                 {
                     string response = null;
-
                     string[] command = line.Split(' ');
 
                     string cmd = command[0].ToUpperInvariant();
@@ -217,7 +215,6 @@ namespace FileHandlerService
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                throw;
             }
         }
 
