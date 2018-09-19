@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using Serilog;
 
 namespace FileHandlerService
 {
@@ -17,7 +20,14 @@ namespace FileHandlerService
 
         public void Start()
         {
-            _listener = new TcpListener(IPAddress.Any, 21);
+            var pathToExe = Process.GetCurrentProcess().MainModule.FileName;
+            var pathToContentRoot = Path.GetDirectoryName(pathToExe);
+            var builder = new ConfigurationBuilder().
+                SetBasePath(pathToContentRoot).
+                AddJsonFile("appSettings.json");
+            IConfigurationRoot config = builder.Build();
+            int ftpPort = config.GetValue<int>("ftpPort");
+            _listener = new TcpListener(IPAddress.Any, ftpPort);
             _listener.Start();
             _listener.BeginAcceptTcpClient(HandleAcceptTcpClient, _listener);
         }
@@ -30,12 +40,20 @@ namespace FileHandlerService
         private void HandleAcceptTcpClient(IAsyncResult result)
         {
             TcpClient client = _listener.EndAcceptTcpClient(result);
+            Log.Information("A client is connected with IP " + ((IPEndPoint)client.Client.RemoteEndPoint).Address);
             _listener.BeginAcceptTcpClient(HandleAcceptTcpClient, _listener);
 
             Task.Factory.StartNew(() =>
             {
-                ProcessClientConnection connection = new ProcessClientConnection(client);
-                connection.HandleClient();
+                try
+                {
+                    ProcessClientConnection connection = new ProcessClientConnection(client);
+                    connection.HandleClient();
+                }
+                catch (Exception e)
+                {
+                    Log.Error(e.Message);
+                }
             });
 
             //ThreadPool.QueueUserWorkItem(connection.HandleClient, client);

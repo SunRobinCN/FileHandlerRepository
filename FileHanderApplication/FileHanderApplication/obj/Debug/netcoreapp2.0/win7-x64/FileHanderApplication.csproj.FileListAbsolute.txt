@@ -1,0 +1,17 @@
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\bin\Debug\netcoreapp2.0\win7-x64\hostpolicy.dll
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\bin\Debug\netcoreapp2.0\win7-x64\hostfxr.dll
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\bin\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.exe
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\bin\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.deps.json
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\bin\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.runtimeconfig.json
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\bin\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.runtimeconfig.dev.json
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\bin\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.dll
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\bin\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.pdb
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\bin\Debug\netcoreapp2.0\win7-x64\FileHandlerService.dll
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\bin\Debug\netcoreapp2.0\win7-x64\FileHandlerService.pdb
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\obj\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.csprojResolveAssemblyReference.cache
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\obj\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.csproj.CoreCompileInputs.cache
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\obj\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.AssemblyInfoInputs.cache
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\obj\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.AssemblyInfo.cs
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\obj\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.dll
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\obj\Debug\netcoreapp2.0\win7-x64\FileHanderApplication.pdb
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHanderApplication\bin\Debug\netcoreapp2.0\win7-x64\appSettings.json

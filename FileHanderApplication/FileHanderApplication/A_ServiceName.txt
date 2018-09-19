@@ -1,0 +1,1 @@
+sc create PerformanceMonitorWebService binPath= "E:\WCF_Collection\PerformanceMonitorWebServiceHost\PerformanceMonitorWebService.exe"

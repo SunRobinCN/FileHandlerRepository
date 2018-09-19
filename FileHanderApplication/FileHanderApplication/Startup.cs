@@ -16,8 +16,6 @@ namespace FileHanderApplication
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            Log.Logger = new LoggerConfiguration().MinimumLevel.Information()
-                .WriteTo.Console().WriteTo.RollingFile("logs\\{Date}.log").CreateLogger();
             services.AddHostedService<FileHandlerHostedService>();
         }
 

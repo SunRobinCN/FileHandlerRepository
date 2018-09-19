@@ -6,3 +6,4 @@ D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication
 D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHandlerService\obj\Debug\netstandard2.0\FileHandlerService.AssemblyInfo.cs
 D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHandlerService\obj\Debug\netstandard2.0\FileHandlerService.dll
 D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHandlerService\obj\Debug\netstandard2.0\FileHandlerService.pdb
+D:\Project_Git\FileHandlerRepository\FileHandlerRepository\FileHanderApplication\FileHandlerService\obj\Debug\netstandard2.0\FileHandlerService.csprojResolveAssemblyReference.cache

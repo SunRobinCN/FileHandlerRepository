@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using Microsoft.Extensions.Configuration;
+using Serilog;
 
 namespace FileHandlerService
 {
@@ -17,8 +20,7 @@ namespace FileHandlerService
 
         private TransferType _connectionType = TransferType.Ascii;
 
-        private string _clientIP;
-        private string _username;
+        private string _clientIp;
         private string _root;
         private string _currentDirectory;
         private IPEndPoint _dataEndpoint;
@@ -37,7 +39,7 @@ namespace FileHandlerService
         public void HandleClient()
         {
             _remoteEndPoint = (IPEndPoint)_controlClient.Client.RemoteEndPoint;
-            _clientIP = _remoteEndPoint.Address.ToString();
+            _clientIp = _remoteEndPoint.Address.ToString();
             var clientStream = _controlClient.GetStream();
 
             _clientReader = new StreamReader(clientStream);
@@ -83,7 +85,6 @@ namespace FileHandlerService
                             response = "221 Service closing control connection";
                             break;
                         case "REIN":
-                            _username = null;
                             response = "220 Service ready for new user";
                             break;
                         case "PORT":
@@ -206,14 +207,11 @@ namespace FileHandlerService
                     _clientWriter.WriteLine(response);
                     _clientWriter.Flush();
 
-                    if (response.StartsWith("221"))
-                    {
-                        break;
-                    }
                 }
             }
             catch (Exception ex)
             {
+                Log.Error(ex.Message);
                 Console.WriteLine(ex);
             }
         }
@@ -234,17 +232,22 @@ namespace FileHandlerService
 
         private string User(string username)
         {
-            _username = username;
-
             return "331 Username ok, need password";
         }
 
         private string Password(string password)
         {
-            //_root = _currentUser.HomeDir;
-            //_currentDirectory = _root;
-            _currentDirectory = @"D:\OneDrive";
-            _root = @"D:\OneDrive";
+            var pathToExe = Process.GetCurrentProcess().MainModule.FileName;
+            var pathToContentRoot = Path.GetDirectoryName(pathToExe);
+
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile("appSettings.json", optional: true, reloadOnChange: true);
+
+            IConfigurationRoot configuration = builder.Build();
+            builder.SetBasePath(pathToContentRoot);
+            string rootFolder = configuration.GetValue<string>("rootFolder");
+            _root = rootFolder;
+            _currentDirectory = _root;
             return "230 User logged in";
 
             //if (true)
@@ -728,9 +731,9 @@ namespace FileHandlerService
             int count = 0;
             long total = 0;
 
-            using (StreamReader rdr = new StreamReader(input, Encoding.ASCII))
+            using (StreamReader rdr = new StreamReader(input, Encoding.UTF8))
             {
-                using (StreamWriter wtr = new StreamWriter(output, Encoding.ASCII))
+                using (StreamWriter wtr = new StreamWriter(output, Encoding.UTF8))
                 {
                     while ((count = rdr.Read(buffer, 0, buffer.Length)) > 0)
                     {
@@ -746,7 +749,7 @@ namespace FileHandlerService
         private long CopyStream(Stream input, Stream output)
         {
             Stream limitedStream = output; // new RateLimitingStream(output, 131072, 0.5);
-
+            return CopyStream(input, limitedStream, 4096);
             if (_connectionType == TransferType.Image)
             {
                 return CopyStream(input, limitedStream, 4096);
@@ -871,10 +874,7 @@ namespace FileHandlerService
             {
                 FileInfo f = new FileInfo(file);
 
-                string date = f.LastWriteTime < DateTime.Now - TimeSpan.FromDays(180) ?
-                    f.LastWriteTime.ToString("MMM dd  yyyy") :
-                    f.LastWriteTime.ToString("MMM dd HH:mm");
-
+                string date = f.LastWriteTime.ToString("yyyy-MM-dd HH:mm");
                 string line = string.Format("-rw-r--r--    2 2003     2003     {0,8} {1} {2}", f.Length, date, f.Name);
 
                 dataWriter.WriteLine(line);
