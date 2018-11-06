@@ -1,0 +1,6 @@
+﻿{
+  "rootFolder": "E:\\",
+  "ftpPort": 2221,
+  "url": "http://10.26.2.22:2222",
+  "logPath": "E:\\WCF_Collection\\FTP_Server\\Logs"
+}

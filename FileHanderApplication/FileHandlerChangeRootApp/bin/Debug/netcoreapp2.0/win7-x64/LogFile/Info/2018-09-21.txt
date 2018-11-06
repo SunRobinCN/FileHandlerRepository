@@ -1,0 +1,4 @@
+[2018-09-21 16:02:52:665][Info] : msg=The program is starting
+[2018-09-21 16:03:16:836][Info] : msg=The program is finished
+[2018-09-21 16:25:52:112][Info] : msg=The program is starting
+[2018-09-21 16:29:45:017][Info] : msg=The program is starting

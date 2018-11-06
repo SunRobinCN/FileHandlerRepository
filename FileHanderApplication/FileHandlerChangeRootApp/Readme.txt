@@ -1,0 +1,5 @@
+﻿如果想要改变FTP服务器的文件夹根路径，方法如下：
+因为在D盘与E盘，都部署有FileHandlerChangeRootApp工具，所以根据现在FTP服务器指向的分区，来修改相应工具的文件。举例，现在FTP服务器指向的是D盘，需要变为E盘。
+1. 使用FTP Filezlla修改D盘中的FileHandlerChangeRootApp的appContent.json文件，rootFolder改为E盘
+2. 在远端启动commandListener，远程执行FileHandlerChangeRootApp工具，这时候会把appContent.json内容覆盖到FTP服务器的appSettings.json文件
+2. 重新启动Filezlla，那么连接的就是E盘了。

@@ -1,0 +1,16 @@
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\bin\Release\netcoreapp2.0\win7-x64\hostpolicy.dll
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\bin\Release\netcoreapp2.0\win7-x64\hostfxr.dll
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\bin\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.exe
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\bin\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.deps.json
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\bin\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.runtimeconfig.json
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\bin\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.runtimeconfig.dev.json
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\bin\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.dll
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\bin\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.pdb
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\obj\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.csprojResolveAssemblyReference.cache
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\obj\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.csproj.CoreCompileInputs.cache
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\obj\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.AssemblyInfoInputs.cache
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\obj\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.AssemblyInfo.cs
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\obj\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.dll
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\obj\Release\netcoreapp2.0\win7-x64\FileHandlerChangeRootApp.pdb
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\bin\Release\netcoreapp2.0\win7-x64\appSettings.json
+D:\Project_Git\FileHandlerRepository\FileHanderApplication\FileHandlerChangeRootApp\bin\Release\netcoreapp2.0\win7-x64\appContent.json
